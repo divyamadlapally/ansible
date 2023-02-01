@@ -3,7 +3,7 @@
   vars:                                    # Delcaring variables at play level; All tasks of the play can access this variable URL 
     URL: play.google.com 
   vars_files:
-    - demo-vars.yaml 
+    - demo-vars.yml 
   vars_prompt:
     - name: URL 
       prompt: Enter URL Value 
