@@ -2,9 +2,11 @@
   hosts: all
   vars: 
    URL: play.google.com 
-   
   vars_files: 
    - demo-vars.yml
+  vars_prompt:
+   - name: URL
+    prompt: Enter URL value
   tasks: 
    - name: printing URL
      ansible.builtin.debug:
