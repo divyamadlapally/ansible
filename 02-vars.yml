@@ -6,7 +6,7 @@
    - demo-vars.yml
   vars_prompt:
    - name: URL
-    prompt: Enter URL value
+     prompt: Enter URL value
   tasks: 
    - name: printing URL
      ansible.builtin.debug:
