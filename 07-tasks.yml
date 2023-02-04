@@ -18,7 +18,7 @@
 
      - name: App-Server installation completed
        ansible.builtin.debug:
-         msg: App-Server installation completed
+          msg: App-Server installation completed
        tags: app
 
       - name: performing DB-Server installation
