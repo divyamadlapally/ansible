@@ -6,7 +6,7 @@
     - name: Run this on Centos Machines only
       ansible.builtin.debug:
         msg: Hai I am CentOs
-      when: ansible_distribution == "CentOs"
+      when: ansible_distribution == "CentOS"
 
     - name: Run this on Ubuntu Machines only
       ansible.builtin.debug:
