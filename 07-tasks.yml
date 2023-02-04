@@ -2,24 +2,24 @@
   hosts: all
   tasks:
     - name: performing webserver installation
-        ansible.builtin.debug:
-          msg: performing webserver installation
-        tags: web
+      ansible.builtin.debug:
+        msg: performing webserver installation
+      tags: web
 
     - name: webserver installation completed
-        ansible.builtin.debug:
-          msg: webserver installation completed
-        tags: web
+      ansible.builtin.debug:
+        msg: webserver installation completed
+      tags: web
 
     - name: performing App-Server installation
-        ansible.builtin.debug:
-          msg: performing App-Server installation
-        tags: app
+      ansible.builtin.debug:
+        msg: performing App-Server installation
+      tags: app
 
      - name: App-Server installation completed
-        ansible.builtin.debug:
-          msg: App-Server installation completed
-        tags: app
+       ansible.builtin.debug:
+         msg: App-Server installation completed
+       tags: app
 
       - name: performing DB-Server installation
         ansible.builtin.debug:
