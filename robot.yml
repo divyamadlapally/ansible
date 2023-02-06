@@ -2,4 +2,5 @@
 - name: Configuring Roboshop Project
   hosts: frontend
   become: yes
-  roles: frontend
+  roles: 
+    - frontend
