@@ -1,0 +1,5 @@
+# playbook which calls the roles
+- name: Configuring Roboshop Project
+  hosts: frontend
+  bacome: yes
+  roles:
