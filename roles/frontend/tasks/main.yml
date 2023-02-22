@@ -20,15 +20,15 @@
     dest:  /usr/share/nginx/html/
     remote_src: yes   #since the source is on a remore machine, ensure you mention remote_src as yes
 
-- name: Coping Nginx path 
+- name: Coping Nginx Config
   ansible.builtin.copy:     #copies the files from the files directory
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
- 
+  notify: Restart nginx service
 
-- name: Restart service httpd, in all cases
+- name: Starting frontend service
   ansible.builtin.service:
     name: nginx
-    state: restarted
+    state: started
     enabled: true
 
