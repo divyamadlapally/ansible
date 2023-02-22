@@ -15,14 +15,14 @@
     state: absent
 
 - name: Coping the Frontend Content to Nginx path 
-    ansible.builtin.copy:
-      src: /tmp/frontend-main/static 
-      dest:  /usr/share/nginx/html/
-      remote_src: yes   #since the source is on a remore machine, ensure you mention remote_src as yes
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/static 
+    dest:  /usr/share/nginx/html/
+    remote_src: yes   #since the source is on a remore machine, ensure you mention remote_src as yes
 
 - name: Coping Nginx path 
-    ansible.builtin.copy:     #copies the files from the files directory
-      src: roboshop.conf
-      dest: /etc/nginx/default.d/roboshop.conf
+  ansible.builtin.copy:     #copies the files from the files directory
+    src: roboshop.conf
+    dest: /etc/nginx/default.d/roboshop.conf
   #since the source is on a remore machine, ensure you mention remote_src as yes
 
