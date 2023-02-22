@@ -24,5 +24,10 @@
   ansible.builtin.copy:     #copies the files from the files directory
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
-  #since the source is on a remore machine, ensure you mention remote_src as yes
+ 
+
+- name: Restart service httpd, in all cases
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
 
