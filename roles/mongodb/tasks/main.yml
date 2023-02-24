@@ -30,3 +30,8 @@
     file: "/tmp/mongodb-main/catalogue.js"
     idempotent: yes
     
+- name: Load USer Schema
+  community.mongodb.mongodb_shell:
+    file: "/tmp/mongodb-main/user.js"
+    idempotent: yes
+    
