@@ -27,6 +27,6 @@
 
 - name: Load Catalogue Schema
   community.mongodb.mongodb_shell:
-    file:v"/tmp/mongodb-main/catalogue.js"
+    file: "/tmp/mongodb-main/catalogue.js"
     indempotent: yes
     
