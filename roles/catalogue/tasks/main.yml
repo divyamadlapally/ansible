@@ -42,6 +42,6 @@
     
 - name: Restarting Service
   ansible.builtin.systemd:
-    state: "{{COMPONENT}}"
-    name: httpd
+    state: started
+    name: "{{COMPONENT}}"
 
