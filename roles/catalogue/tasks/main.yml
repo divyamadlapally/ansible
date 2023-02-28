@@ -17,11 +17,20 @@
     dest: /tmp
     remote_src: yes       #remore_src:yes tells that the source to be downloaded/copied is not locally available
 
-- name: Copy file tovthe roboshopp home directory
+
+- name: clearnuo of old content
+  ansible.builtin.file:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/
+    state: absent
+
+- name: Copy file to the roboshop home directory
   ansible.builtin.copy:
     src: /tmp/{{COMPONENT}}-main/
     dest: /home/{{APPUSER}}/{{COMPONENT}}/
     remote_src: yes 
     owner: "{{APPUSER}}"
     group: "{{APPUSER}}"
-    
+
+- name: Install node.js packages
+  community.general.npm:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/
