@@ -34,3 +34,10 @@
 - name: Install node.js packages
   community.general.npm:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
+
+- name: Coping systemd service file
+  ansible.builtin.copy:
+    src: systemd.service
+    dest: /etc/systemd/system/catalogue.service
+   
+    
