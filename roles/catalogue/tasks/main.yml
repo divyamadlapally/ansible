@@ -38,5 +38,10 @@
 - name: Coping systemd service file
   ansible.builtin.template:
     src: systemd.service
-    dest: /etc/systemd/system/catalogue.service
+    dest:  /etc/systemd/system/{{COMPONENT}}.service
+    
+- name: Restarting Service
+  ansible.builtin.systemd:
+    state: "{{COMPONENT}}"
+    name: httpd
 
