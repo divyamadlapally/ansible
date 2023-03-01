@@ -2,7 +2,7 @@
   ansible.builtin.copy:                    # Copies the file from the files directory
     src: redis.repo
     dest: /etc/yum.repos.d/redis.repo
-    
+
 - name: Updating Config
   ansible.builtin.replace:
     path: /etc/{{COMPONENT}}/{{COMPONENT}}.conf
@@ -13,7 +13,7 @@
 - name: Restarting service 
   ansible.builtin.service:
     name: "{{COMPONENT}}"
-    state: started
+    state: restarted
     enabled: true  
 
     
