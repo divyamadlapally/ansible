@@ -18,7 +18,7 @@
     remote_src: yes       #remore_src:yes tells that the source to be downloaded/copied is not locally available
 
 
-- name: clearnuo of old content
+- name: cleanup of old content
   ansible.builtin.file:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
     state: absent

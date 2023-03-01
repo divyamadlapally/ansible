@@ -5,6 +5,10 @@
 
 - name: Install Redis
   ansible.builtin.package:
-    name: redis-6.2.7
+    name: redis-6.2.9
     state: present
+
+- name: Set-Hostname
+  ansible.builtin.shell: set-hostname {{COMPONENT}}
+
     
