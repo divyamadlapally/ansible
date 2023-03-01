@@ -8,6 +8,13 @@
     name: redis-7.0.8
     state: present  
 
+
+- name: restarting service
+  ansible.builtin.service:
+    name: redis
+    state: restarted
+    enabled: true
+
 - name: Set-Hostname
   ansible.builtin.shell: set-hostname {{COMPONENT}}
 
